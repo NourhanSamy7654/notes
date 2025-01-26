@@ -8,11 +8,10 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
-import app from "../webPages/firebase"; // Import your initialized Firebase app
+import app from "../webPages/firebase";
 
 const db = getFirestore(app);
 
-// Fetch all notes
 export const fetchNotes = createAsyncThunk("notes/fetchNotes", async () => {
   const querySnapshot = await getDocs(collection(db, "notes"));
   const notes = [];
@@ -22,14 +21,12 @@ export const fetchNotes = createAsyncThunk("notes/fetchNotes", async () => {
   return notes;
 });
 
-// Add a new note
 export const addNote = createAsyncThunk("notes/addNote", async (note) => {
   const docRef = await addDoc(collection(db, "notes"), note);
   const doc = await docRef.get();
   return { id: doc.id, ...doc.data() };
 });
 
-// Delete a note
 export const deleteNote = createAsyncThunk(
   "notes/deleteNote",
   async (noteId) => {
@@ -38,7 +35,6 @@ export const deleteNote = createAsyncThunk(
   }
 );
 
-// Update a note
 export const updateNote = createAsyncThunk(
   "notes/updateNote",
   async ({ id, updates }) => {

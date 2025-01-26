@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SideBar from "./Comonant/webPages/Sidebar";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import "./Comonant/webPages/Sidebar.css";
-
+import Home from "./Comonant/webPages/Home";
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -29,6 +29,7 @@ function App() {
           )}
           <div className={isSidebarOpen ? "col-md-10" : "col-md-12"}>
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/noteslist" element={<NotesList />} />
               <Route path="/addnotes" element={<AddNoteForm />} />
             </Routes>
