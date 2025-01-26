@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Crete+Round:ital@0;1&family=Pacifico&family=Playwrite+IN:wght@100..400&family=Sevillana&family=Smooch+Sans:wght@100..900&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #789fc6;
+}
+
+.logo {
+  margin-left: 50px;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: "Pacifico", serif;
+  border-bottom: 6px solid;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}

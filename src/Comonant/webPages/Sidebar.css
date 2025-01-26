@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Crete+Round:ital@0;1&family=Pacifico&family=Playwrite+IN:wght@100..400&family=Sevillana&family=Smooch+Sans:wght@100..900&display=swap");
+
+.sidebar-container {
+  position: relative;
+}
+.sidebar .active {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+.sidebar {
+  height: 100vh;
+  background-color: #b6b5bf;
+  border-right: 1px solid #ddd;
+  padding-top: 60px;
+  transition: width 0.3s;
+  font-size: 40px;
+  font-family: "Smooch Sans", serif;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  z-index: 1;
+}
