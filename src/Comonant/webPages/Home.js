@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome to Notes Website</h1>
-      <p> enjoy</p>
+      <p> enjoy🕊️</p>
     </div>
   );
 };

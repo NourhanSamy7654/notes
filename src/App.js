@@ -23,11 +23,11 @@ function App() {
       <div className="container-fluid">
         <div className="row">
           {isSidebarOpen && (
-            <div className="col-md-2">
+            <div className="col-2">
               <SideBar />
             </div>
           )}
-          <div className={isSidebarOpen ? "col-md-10" : "col-md-12"}>
+          <div className={isSidebarOpen ? "col-10" : "col-12"}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/noteslist" element={<NotesList />} />
